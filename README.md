@@ -1,31 +1,29 @@
 # Tureng
 
-TODO: Write a gem description
+[Tureng][02] sözlüğü için un-official Ruby uygulaması. [Orijinal uygumala][01]
 
-## Installation
+[Ahmet Kapıkıran][03] tarafafından yazılan orijinal uygulamamın `gem`
+haline getirilmiş hali.
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'tureng'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+## Kurulum
 
     $ gem install tureng
 
-## Usage
+## Kullanım
 
-TODO: Write usage instructions here
+    $ tureng merhaba
+    $ tureng KELİME
 
-## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/tureng/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+## Katkı Yapmak için
+
+1. `fork` yapın ( https://github.com/vigo/tureng/fork )
+2. Kendi `branch`’inizi yapın (`git checkout -b benim-eklerim`)
+3. Yaptıklarınızı `commit` edin (`git commit -am 'Yeni özellikler'`)
+4. `branch`’i `push` edin (`git push origin benim-eklerim`)
+5. Yeni bir **Pull Request** oluşturun!
+
+
+[01]: https://github.com/ahmetkapikiran/tureng
+[02]: http://tureng.com
+[03]: https://github.com/ahmetkapikiran
