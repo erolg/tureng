@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["ugurozyilmazel@gmail.com"]
   spec.summary       = %q{Unofficial Tureng dictionary tool.}
   spec.description   = %q{Turkish-English dictionary tool for commandline.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/vigo/tureng"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
