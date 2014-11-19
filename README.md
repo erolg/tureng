@@ -1,4 +1,5 @@
 # Tureng
+[![Gem Version](https://badge.fury.io/rb/tureng.svg)](http://badge.fury.io/rb/tureng)
 
 [Tureng][00] sözlüğü için un-official Ruby uygulaması. Orijinal uygulamaları
 [buradan][01] ve [buradan][02] görebilirsiniz.
