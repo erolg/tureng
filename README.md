@@ -1,5 +1,6 @@
 # Tureng
 [![Gem Version](https://badge.fury.io/rb/tureng.svg)](http://badge.fury.io/rb/tureng)
+[![Build Status](https://travis-ci.org/vigo/tureng.svg?branch=master)](https://travis-ci.org/vigo/tureng)
 
 [Tureng][00] sözlüğü için un-official Ruby uygulaması. Orijinal uygulamaları
 [buradan][01] ve [buradan][02] görebilirsiniz.
