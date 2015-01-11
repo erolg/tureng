@@ -15,7 +15,7 @@ class Tureng
     @response = Nokogiri::HTML(open("#{uri}"), nil, 'utf-8')
   end
 
-  def draw_results(params)
+  def draw_results(common = FALSE,params)
     source = @response.css("table[id='#{params}ResultsTable']")
     return if source.empty?
 
@@ -34,6 +34,11 @@ class Tureng
     # parse and count translation results
     tr_tags = source.css("tr")
     size_of_tr_tags = tr_tags.size - 1 # -1 is for th tags
+
+    # check request is common
+    if common
+      size_of_tr_tags = 5 if size_of_tr_tags > 5
+    end
 
     # fill table with results
     for i in 1..size_of_tr_tags
@@ -77,4 +82,27 @@ class Tureng
     end
     output.join("\n")
   end
-end
+
+  def draw_common_results
+    status = @response.css("h1")[1].text.strip
+    output = []
+
+    if status == "Did you mean that?"
+      output << "Aradığınız kelime bulunamadı. Bunlardan birini yazmak istemiş olabilir misiniz?"
+      output << get_suggestions
+
+    elsif status == "Term not found"
+      output << "Aradığınız kelime bulunamadı."
+
+    else
+
+      output << draw_results(TRUE, 'turkish')
+      output << draw_results(TRUE, 'turkishFull')
+      output << draw_results(TRUE, 'english')
+      output << draw_results(TRUE, 'englishFull')
+
+    end
+    output.join("\n")
+  end
+
+  end
